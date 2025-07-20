@@ -1,0 +1,10 @@
+{
+  "name": "multiplayer-heardle",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Monorepo for Multiplayer Heardle",
+  "workspaces": ["frontend", "backend", "shared"],
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+} 

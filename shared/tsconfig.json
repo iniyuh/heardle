@@ -1,0 +1,12 @@
+{
+  // TypeScript config for shared types and utilities used by both frontend and backend
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "dist"
+  },
+  // Include all shared type and utility files
+  "include": ["./types", "./utils"]
+} 

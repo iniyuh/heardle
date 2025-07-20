@@ -1,0 +1,16 @@
+{
+  "name": "shared",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Shared types and utilities for Multiplayer Heardle",
+  "scripts": {
+    "lint": "eslint . --ext .ts,.js",
+    "format": "prettier --write ."
+  },
+  "main": "index.js",
+  "types": "index.d.ts",
+  "devDependencies": {
+    "eslint": "^9.31.0",
+    "prettier": "^3.6.2"
+  }
+}
