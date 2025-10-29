@@ -1,16 +1,21 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { useSocketContext } from './contexts/SocketContext'
+import { env } from './config/env'
 
 function App() {
   const [count, setCount] = useState(0)
+  const { state: socketState, dispatch: socketDispatch } = useSocketContext()
+  const { apiUrl } = env
 
-  const socketContext = useSocketContext();
-
-  console.log("RAAAH");
-  console.log("INITIAL SOCKET STATE:", socketContext.state);
+  useEffect(() => {
+    if (env.enableDevLogging) {
+      console.info('[env] Loaded API URL:', apiUrl)
+      console.info('[env] Initial socket state:', socketState, socketDispatch)
+    }
+  }, [apiUrl, socketState])
 
   return (
     <>
@@ -29,6 +34,9 @@ function App() {
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+        <p>
+          API base URL: <code>{apiUrl || 'Not configured'}</code>
         </p>
       </div>
       <p className="read-the-docs">
