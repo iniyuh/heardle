@@ -11,10 +11,7 @@ const createInitialSocketState = (): SocketState => ({
 
 export const initialSocketState = createInitialSocketState()
 
-export const socketReducer = (
-  state: SocketState,
-  action: SocketAction,
-): SocketState => {
+export const socketReducer = (state: SocketState, action: SocketAction): SocketState => {
   switch (action.type) {
     case 'SOCKET_CONNECTING':
       return {

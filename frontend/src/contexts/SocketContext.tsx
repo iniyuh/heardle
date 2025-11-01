@@ -1,10 +1,5 @@
 import type { ReactNode } from 'react'
-import {
-  createContext,
-  useContext,
-  useMemo,
-  useReducer,
-} from 'react'
+import { createContext, useContext, useMemo, useReducer } from 'react'
 import { socketReducer, initialSocketState } from '../state/socketReducer'
 import type { SocketDispatch, SocketState } from '../types/socket'
 
@@ -20,9 +15,7 @@ export const SocketProvider = ({ children }: { children: ReactNode }) => {
 
   const value = useMemo(() => ({ state, dispatch }), [state])
 
-  return (
-    <SocketContext.Provider value={value}>{children}</SocketContext.Provider>
-  )
+  return <SocketContext.Provider value={value}>{children}</SocketContext.Provider>
 }
 
 export const useSocketContext = () => {

@@ -1,10 +1,4 @@
-export type GameStatus =
-  | 'idle'
-  | 'lobby'
-  | 'countdown'
-  | 'in-round'
-  | 'round-results'
-  | 'completed'
+export type GameStatus = 'idle' | 'lobby' | 'countdown' | 'in-round' | 'round-results' | 'completed'
 
 export interface PlayerSummary {
   id: string

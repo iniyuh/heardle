@@ -1,0 +1,11 @@
+node_modules
+dist
+dist-ssr
+build
+.firebase
+firebase-debug.log*
+lib
+*.log
+frontend/full.css
+frontend/tailwind-output*.css
+frontend/temp*.css

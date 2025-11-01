@@ -1,3 +1,3 @@
 export default {
-  content: ["./src/App.tsx"],
+  content: ['./src/App.tsx'],
 }
